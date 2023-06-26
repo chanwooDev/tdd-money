@@ -15,10 +15,17 @@ class DollarTest {
 
     @Test
     public void testEquality() {
+
+        //Dollar
         assertTrue(new Dollar(5).equals(new Dollar(5)));
         assertFalse(new Dollar(5).equals(new Dollar(6)));
+
+        //Franc
         assertTrue(new Franc(5).equals(new Franc(5)));
         assertFalse(new Franc(5).equals(new Franc(6)));
+
+        //Dollar Franc 비교
+        assertFalse(new Dollar(5).equals(new Franc(5)));
     }
 
     @Test
