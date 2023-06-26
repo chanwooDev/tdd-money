@@ -1,18 +1,12 @@
 package com.chanu.money;
 
-public class Dollar extends Money{
-    public Dollar(int amount) {
-        this.amount = amount;
+public class Dollar extends Money {
+
+    public Dollar(int amount, String currency) {
+        super(amount, currency);
     }
 
     public Dollar times(int multiplier) {
-        return new Dollar(amount * multiplier);
+        return Money.dollar(amount * multiplier);
     }
-
-    @Override
-    public int hashCode() {
-        return super.hashCode();
-    }
-
-
 }
