@@ -2,7 +2,7 @@ package com.chanu.money;
 
 import java.util.Objects;
 
-public abstract class Money {
+public class Money {
     protected int amount;
     protected String currency;
 
@@ -11,7 +11,9 @@ public abstract class Money {
         this.currency = currency;
     }
 
-    abstract Money times(int multiplier);
+    Money times(int multiplier) {
+        return null;
+    };
     @Override
     public boolean equals(Object obj) {
         Money money = (Money) obj;
@@ -30,4 +32,8 @@ public abstract class Money {
         return currency;
     }
 
+    @Override
+    public String toString() {
+        return amount + " " + currency;
+    }
 }
