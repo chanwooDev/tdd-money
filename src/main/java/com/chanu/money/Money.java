@@ -12,12 +12,12 @@ public class Money {
     }
 
     Money times(int multiplier) {
-        return null;
+        return new Money(amount * multiplier, currency);
     };
     @Override
     public boolean equals(Object obj) {
         Money money = (Money) obj;
-        return amount == money.amount && getClass().equals(money.getClass());
+        return amount == money.amount && currency().equals(money.currency());
     }
 
     public static Dollar dollar(int amount) {
